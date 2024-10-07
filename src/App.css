@@ -1,0 +1,282 @@
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+
+:root {
+  --primary-color: #8d6e63;
+  --primary-dark: #6d4c41;
+  --primary-light: #f9f5eb;
+  --secondary-color: #e0d5c1;
+  --text-color: #4a4a4a;
+  --background-color: #f0e6d2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Handlee", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.sketchbook {
+  width: 100%;
+  max-width: 1400px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+h1 {
+  color: var(--text-color);
+  font-size: 2rem;
+  text-align: center;
+  padding: 15px 0;
+  background-color: var(--primary-light);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.sketchbook-container {
+  display: flex;
+  height: calc(100vh - 80px);
+  max-height: 800px;
+}
+
+.toolbox {
+  width: 150px;
+  padding: 15px;
+  background-color: var(--primary-light);
+  border-right: 2px solid var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tool-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tool-item label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+input[type="color"],
+input[type="range"],
+select {
+  width: 100%;
+  padding: 3px;
+  border: 1px solid var(--secondary-color);
+  border-radius: 3px;
+}
+
+.btn,
+.eraser-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  padding: 8px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn:hover,
+.eraser-btn:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn:active,
+.eraser-btn:active {
+  transform: scale(0.98);
+}
+
+.eraser-btn.active {
+  background-color: var(--primary-dark);
+}
+
+.canvas-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffaf0;
+  position: relative;
+  overflow: hidden;
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar {
+  width: 120px;
+  padding: 15px;
+  background-color: var(--primary-light);
+  border-left: 2px solid var(--secondary-color);
+  overflow-y: auto;
+}
+
+.sidebar h2 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.image-selection {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+}
+
+.image-box {
+  width: 120px; /* Increased width */
+  height: 120px; /* Increased height */
+  border: 2px solid var(--secondary-color);
+  border-radius: 3px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color 0.3s, transform 0.1s;
+}
+.image-box:hover {
+  border-color: var(--primary-color);
+}
+
+.image-box:active {
+  transform: scale(0.95);
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.color-palette {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 5px;
+}
+
+.color-btn {
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-btn:hover {
+  transform: scale(1.1);
+}
+
+.undo-redo-container {
+  display: flex;
+  gap: 5px;
+}
+
+.undo-redo-container .btn {
+  flex: 1;
+  padding: 5px;
+}
+
+@media (max-width: 1024px) {
+  .sketchbook-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .toolbox,
+  .sidebar {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid var(--secondary-color);
+  }
+
+  .canvas-container {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    padding: 12px 0;
+  }
+
+  .toolbox,
+  .sidebar {
+    padding: 12px;
+  }
+
+  .btn,
+  .eraser-btn {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .image-box {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sketchbook {
+    border-radius: 0;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+    padding: 10px 0;
+  }
+
+  .toolbox,
+  .sidebar {
+    padding: 8px;
+  }
+
+  .btn,
+  .eraser-btn {
+    font-size: 0.7rem;
+    padding: 5px;
+  }
+
+  .image-box {
+    width: 40px;
+    height: 40px;
+  }
+
+  .canvas-container {
+    height: 50vh;
+  }
+}
