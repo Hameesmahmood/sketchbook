@@ -1,6 +1,5 @@
-import React, { useState, useRef, useEffect } from "react";
+import  { useState, useRef, useEffect } from "react";
 import {
-  Book,
   Download,
   Eraser,
   PenTool,
@@ -26,21 +25,32 @@ function App() {
   const [historyIndex, setHistoryIndex] = useState(-1);
   const [background, setBackground] = useState(null);
 
-  const placeholderImages = [Birb, Cat, Flower, Cat, Flower, Cat, Flower];
+  const placeholderImages = [Birb, Cat, Flower];
 
   const predefinedColors = [
-    "#000000",
-    "#FFFFFF",
-    "#FF0000",
-    "#00FF00",
-    "#0000FF",
-    "#FFFF00",
-    "#FF00FF",
-    "#00FFFF",
-    "#FFA500",
-    "#800080",
-    "#008000",
-    "#FFC0CB",
+   "#000000",  // Black
+  "#FFFFFF",  // White
+  "#FF0000",  // Red
+  "#00FF00",  // Green
+  "#0000FF",  // Blue
+  "#FFFF00",  // Yellow
+  "#FF00FF",  // Magenta
+  "#00FFFF",  // Cyan
+  "#FFA500",  // Orange
+  "#800080",  // Purple
+  "#008000",  // Dark Green
+  "#FFC0CB",  // Pink
+  "#A52A2A",  // Brown
+  "#FFD700",  // Gold
+  "#B0E0E6",  // Powder Blue
+  "#DC143C",  // Crimson
+  "#8A2BE2",  // Blue Violet
+  "#00FA9A",  // Medium Spring Green
+  "#FF4500",  // Orange Red
+  "#2E8B57",  // Sea Green
+  "#6A5ACD",  // Slate Blue
+  "#D2691E",  // Chocolate
+  "#FF6347",  // Tomato
   ];
 
   useEffect(() => {

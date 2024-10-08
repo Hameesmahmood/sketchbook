@@ -24,12 +24,15 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
+  background: linear-gradient(
+    45deg,#40c9ff 50%,#e81cff 50%
+  );
 }
 
 .sketchbook {
   width: 100%;
   max-width: 1400px;
-  background-color: #fff;
+  
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -37,24 +40,28 @@ body {
 
 h1 {
   color: var(--text-color);
-  font-size: 2rem;
+  font-size: 3rem;
+  font-family: bold;
   text-align: center;
   padding: 15px 0;
-  background-color: var(--primary-light);
-  border-bottom: 2px solid var(--secondary-color);
+  background-color: #ebf4f5;
+  /* background: linear-gradient(
+    45deg,#eca0ff 50%,#84ffc9 50%
+  ); */
+  /* border-bottom: 2px solid var(--secondary-color); */
 }
 
 .sketchbook-container {
   display: flex;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 90px);
   max-height: 800px;
 }
 
 .toolbox {
   width: 150px;
   padding: 15px;
-  background-color: var(--primary-light);
-  border-right: 2px solid var(--secondary-color);
+  background-color: #ebf4f5;
+  /* border-right: 2px solid var(--secondary-color); */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -71,7 +78,8 @@ h1 {
   align-items: center;
   gap: 5px;
   font-size: 0.9rem;
-  color: var(--text-color);
+  color: black;
+  font-weight: bold;
 }
 
 input[type="color"],
@@ -122,6 +130,7 @@ select {
   background-color: #fffaf0;
   position: relative;
   overflow: hidden;
+  border: 2px solid var(--secondary-color);
 }
 
 canvas {
@@ -132,15 +141,16 @@ canvas {
 }
 
 .sidebar {
-  width: 120px;
+  width: 170px;
   padding: 15px;
-  background-color: var(--primary-light);
-  border-left: 2px solid var(--secondary-color);
+  background-color: #ebf4f5;
+  /* border-left: 2px solid var(--secondary-color); */
   overflow-y: auto;
 }
 
 .sidebar h2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   margin-bottom: 10px;
   color: var(--text-color);
   text-align: center;
@@ -157,17 +167,18 @@ canvas {
   width: 120px; /* Increased width */
   height: 120px; /* Increased height */
   border: 2px solid var(--secondary-color);
-  border-radius: 3px;
+  border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
   transition: border-color 0.3s, transform 0.1s;
 }
 .image-box:hover {
-  border-color: var(--primary-color);
+  border-color: black;
 }
 
 .image-box:active {
   transform: scale(0.95);
+  border-color: black;
 }
 
 .image-box img {
