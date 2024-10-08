@@ -24,15 +24,12 @@ body {
   align-items: center;
   min-height: 100vh;
   padding: 20px;
-  background: linear-gradient(
-    45deg,#40c9ff 50%,#e81cff 50%
-  );
+  background: linear-gradient(45deg, #40c9ff 50%, #e81cff 50%);
 }
 
 .sketchbook {
   width: 100%;
   max-width: 1400px;
-  
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -45,10 +42,6 @@ h1 {
   text-align: center;
   padding: 15px 0;
   background-color: #ebf4f5;
-  /* background: linear-gradient(
-    45deg,#eca0ff 50%,#84ffc9 50%
-  ); */
-  /* border-bottom: 2px solid var(--secondary-color); */
 }
 
 .sketchbook-container {
@@ -61,7 +54,6 @@ h1 {
   width: 150px;
   padding: 15px;
   background-color: #ebf4f5;
-  /* border-right: 2px solid var(--secondary-color); */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -144,7 +136,6 @@ canvas {
   width: 170px;
   padding: 15px;
   background-color: #ebf4f5;
-  /* border-left: 2px solid var(--secondary-color); */
   overflow-y: auto;
 }
 
@@ -164,8 +155,8 @@ canvas {
 }
 
 .image-box {
-  width: 120px; /* Increased width */
-  height: 120px; /* Increased height */
+  width: 120px;
+  height: 120px;
   border: 2px solid var(--secondary-color);
   border-radius: 5px;
   overflow: hidden;
